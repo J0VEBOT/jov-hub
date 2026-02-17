@@ -1,0 +1,21 @@
+{
+  "name": "jovhub",
+  "version": "0.1.0",
+  "description": "JovHub CLI — publish and search JOV skills",
+  "type": "module",
+  "bin": {
+    "jovhub": "./bin/jovhub.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["bin/", "dist/", "README.md"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/cli.ts"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/J0VEBOT/jov-hub"
+  }
+}
