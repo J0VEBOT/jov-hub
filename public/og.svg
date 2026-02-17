@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#050505"/><stop offset="100%" stop-color="#0a0f08"/></linearGradient>
+    <linearGradient id="sL" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="transparent"/><stop offset="20%" stop-color="#84ff00"/><stop offset="80%" stop-color="#84ff00"/><stop offset="100%" stop-color="transparent"/></linearGradient>
+    <filter id="sG"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="sGr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(132,255,0,0.025)" stroke-width="0.5"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sBg)"/>
+  <rect width="1200" height="630" fill="url(#sGr)"/>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#sL)" opacity="0.5"/>
+  <circle cx="600" cy="260" r="350" fill="rgba(132,255,0,0.02)"/>
+  <g transform="translate(450,100)"><rect width="300" height="200" rx="36" fill="rgba(132,255,0,0.04)" stroke="rgba(132,255,0,0.12)" stroke-width="1"/><text x="150" y="135" text-anchor="middle" font-family="monospace" font-size="100" font-weight="900" fill="#84ff00" filter="url(#sG)">JOV</text></g>
+  <text x="600" y="380" text-anchor="middle" font-family="monospace" font-size="48" font-weight="900" fill="#84ff00" letter-spacing="10" filter="url(#sG)">J0VEBOT</text>
+  <text x="600" y="420" text-anchor="middle" font-family="monospace" font-size="16" fill="rgba(132,255,0,0.4)" letter-spacing="4">AI Agent Skills for Jupiter</text>
+  <g transform="translate(420,460)"><rect width="360" height="36" rx="18" fill="rgba(132,255,0,0.04)" stroke="rgba(132,255,0,0.1)" stroke-width="1"/><text x="24" y="23" font-family="monospace" font-size="12" fill="#84ff00" font-weight="700">$ npx add-skill J0VEBOT/agent-skills</text></g>
+  <text x="600" y="560" text-anchor="middle" font-family="monospace" font-size="13" fill="rgba(132,255,0,0.25)" letter-spacing="2">$JOV on Solana · github.com/J0VEBOT</text>
+  <rect x="0" y="627" width="1200" height="3" fill="url(#sL)" opacity="0.5"/>
+</svg>

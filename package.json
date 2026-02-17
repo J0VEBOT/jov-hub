@@ -1,0 +1,35 @@
+{
+  "name": "jov-hub",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun --bun vite dev --port 3000",
+    "build": "bun --bun vite build",
+    "preview": "bun --bun vite preview",
+    "docs:list": "bun scripts/docs-list.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "vitest run -c vitest.e2e.config.ts",
+    "coverage": "vitest run --coverage",
+    "convex:deploy": "bunx convex deploy --typecheck=disable --yes",
+    "lint": "bun run lint:biome && bun run lint:oxlint",
+    "lint:biome": "biome check .",
+    "lint:oxlint": "oxlint --type-aware --tsconfig ./tsconfig.oxlint.json ./src ./convex ./packages/jovhub/src ./packages/schema/src",
+    "format": "biome format --write ."
+  },
+  "dependencies": {
+    "@auth/core": "^0.37.4",
+    "@convex-dev/auth": "^0.0.90",
+    "@fontsource/bricolage-grotesque": "^5.2.10"
+  },
+  "description": "JOV Hub \u2014 Skill & Soul Registry for AI Agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/J0VEBOT/jov-hub"
+  },
+  "homepage": "https://hub.j0vebot.com",
+  "license": "MIT"
+}
