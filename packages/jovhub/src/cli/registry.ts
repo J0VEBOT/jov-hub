@@ -2,9 +2,9 @@ import { readGlobalConfig, writeGlobalConfig } from '../config.js'
 import { discoverRegistryFromSite } from '../discovery.js'
 import type { GlobalOpts } from './types.js'
 
-export const DEFAULT_SITE = 'https://hub.j0vebot.com'
-export const DEFAULT_REGISTRY = 'https://hub.j0vebot.com'
-const LEGACY_REGISTRY_HOSTS = new Set(['auth.jovhub.com', 'auth.jovhub.com', 'auth.hub.j0vebot.com'])
+export const DEFAULT_SITE = 'https://hub.j0ve.bot'
+export const DEFAULT_REGISTRY = 'https://hub.j0ve.bot'
+const LEGACY_REGISTRY_HOSTS = new Set(['auth.jovhub.com', 'auth.jovhub.com', 'auth.hub.j0ve.bot'])
 
 export async function resolveRegistry(opts: GlobalOpts) {
   const explicit = opts.registrySource !== 'default' ? opts.registry.trim() : ''

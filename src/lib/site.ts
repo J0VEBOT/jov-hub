@@ -1,8 +1,8 @@
 export type SiteMode = 'skills' | 'souls'
 
-const DEFAULT_CLAWHUB_SITE_URL = 'https://hub.j0vebot.com'
-const DEFAULT_ONLYCRABS_SITE_URL = 'https://souls.j0vebot.com'
-const DEFAULT_ONLYCRABS_HOST = 'souls.j0vebot.com'
+const DEFAULT_CLAWHUB_SITE_URL = 'https://hub.j0ve.bot'
+const DEFAULT_ONLYCRABS_SITE_URL = 'https://souls.j0ve.bot'
+const DEFAULT_ONLYCRABS_HOST = 'souls.j0ve.bot'
 
 export function getJovHubSiteUrl() {
   return import.meta.env.VITE_SITE_URL ?? DEFAULT_CLAWHUB_SITE_URL

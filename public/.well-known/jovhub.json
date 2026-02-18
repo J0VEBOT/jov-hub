@@ -1,6 +1,6 @@
 {
-  "apiBase": "https://hub.j0vebot.com",
-  "authBase": "https://hub.j0vebot.com",
+  "apiBase": "https://hub.j0ve.bot",
+  "authBase": "https://hub.j0ve.bot",
   "minCliVersion": "0.1.0",
-  "registry": "https://hub.j0vebot.com"
+  "registry": "https://hub.j0ve.bot"
 }

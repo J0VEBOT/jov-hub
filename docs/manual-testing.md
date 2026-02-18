@@ -10,8 +10,8 @@ read_when:
 ## Setup
 - Ensure logged in: `bun jovhub whoami` (or `bun jovhub login`).
 - Optional: set env
-  - `CLAWHUB_SITE=https://hub.j0vebot.com`
-  - `CLAWHUB_REGISTRY=https://hub.j0vebot.com`
+  - `CLAWHUB_SITE=https://hub.j0ve.bot`
+  - `CLAWHUB_REGISTRY=https://hub.j0ve.bot`
 
 ## Smoke
 - `bun jovhub --help`
@@ -40,7 +40,7 @@ read_when:
 ## Delete / undelete (owner/admin)
 - `bun jovhub delete jovhub-manual-<ts> --yes`
 - Verify hidden:
-- `curl -i "https://hub.j0vebot.com/api/v1/skills/jovhub-manual-<ts>"`
+- `curl -i "https://hub.j0ve.bot/api/v1/skills/jovhub-manual-<ts>"`
 - Restore:
   - `bun jovhub undelete jovhub-manual-<ts> --yes`
 - Cleanup:
@@ -54,7 +54,7 @@ read_when:
 Run against prod:
 
 ```
-PLAYWRIGHT_BASE_URL=https://hub.j0vebot.com bun run test:pw
+PLAYWRIGHT_BASE_URL=https://hub.j0ve.bot bun run test:pw
 ```
 
 Run against a local preview server:

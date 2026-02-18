@@ -51,7 +51,7 @@
 
 ### Changed
 - Brand: rebrand to JovHub and publish CLI as `jovhub` (legacy `jovhub` supported).
-- Domain: default site/registry now `https://hub.j0vebot.com`; `.well-known/jovhub.json` preferred.
+- Domain: default site/registry now `https://hub.j0ve.bot`; `.well-known/jovhub.json` preferred.
 - Theme: persist theme under `jovhub-theme` (legacy key still read).
 
 ### Fixed

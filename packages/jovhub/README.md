@@ -26,7 +26,7 @@ jovhub login --token clh_...
 
 Notes:
 
-- Browser login opens `https://hub.j0vebot.com/cli/auth` and completes via a loopback callback.
+- Browser login opens `https://hub.j0ve.bot/cli/auth` and completes via a loopback callback.
 - Token stored in `~/Library/Application Support/jovhub/config.json` on macOS (override via `CLAWHUB_CONFIG_PATH`, legacy `CLAWDHUB_CONFIG_PATH`).
 
 ## Examples
@@ -51,7 +51,7 @@ jovhub sync --root ../jovis/skills --all --dry-run
 
 ## Defaults
 
-- Site: `https://hub.j0vebot.com` (override via `--site` or `CLAWHUB_SITE`, legacy `CLAWDHUB_SITE`)
+- Site: `https://hub.j0ve.bot` (override via `--site` or `CLAWHUB_SITE`, legacy `CLAWDHUB_SITE`)
 - Registry: discovered from `/.well-known/jovhub.json` on the site (legacy `/.well-known/jovhub.json`; override via `--registry` or `CLAWHUB_REGISTRY`)
 - Workdir: current directory (falls back to JOV workspace if configured; override via `--workdir` or `CLAWHUB_WORKDIR`)
 - Install dir: `./skills` under workdir (override via `--dir`)

@@ -27,10 +27,10 @@ vi.mock('@clack/prompts', () => ({
 }))
 
 vi.mock('../../config.js', () => ({
-  readGlobalConfig: vi.fn(async () => ({ registry: 'https://hub.j0vebot.com', token: 'tkn' })),
+  readGlobalConfig: vi.fn(async () => ({ registry: 'https://hub.j0ve.bot', token: 'tkn' })),
 }))
 
-const mockGetRegistry = vi.fn(async () => 'https://hub.j0vebot.com')
+const mockGetRegistry = vi.fn(async () => 'https://hub.j0ve.bot')
 vi.mock('../registry.js', () => ({
   getRegistry: () => mockGetRegistry(),
 }))
@@ -89,8 +89,8 @@ function makeOpts(): GlobalOpts {
   return {
     workdir: '/work',
     dir: '/work/skills',
-    site: 'https://hub.j0vebot.com',
-    registry: 'https://hub.j0vebot.com',
+    site: 'https://hub.j0ve.bot',
+    registry: 'https://hub.j0ve.bot',
     registrySource: 'default',
   }
 }

@@ -7,7 +7,7 @@ read_when:
 
 # API v1
 
-Base: `https://hub.j0vebot.com`
+Base: `https://hub.j0ve.bot`
 
 OpenAPI: `/api/v1/openapi.json`
 

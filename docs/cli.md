@@ -19,8 +19,8 @@ bun jovhub --help
 
 - `--workdir <dir>`: working directory (default: cwd; falls back to JOV workspace if configured)
 - `--dir <dir>`: install dir under workdir (default: `skills`)
-- `--site <url>`: base URL for browser login (default: `https://hub.j0vebot.com`)
-- `--registry <url>`: API base URL (default: discovered, else `https://hub.j0vebot.com`)
+- `--site <url>`: base URL for browser login (default: `https://hub.j0ve.bot`)
+- `--registry <url>`: API base URL (default: discovered, else `https://hub.j0ve.bot`)
 - `--no-input`: disable prompts
 
 Env equivalents:

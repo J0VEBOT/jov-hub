@@ -5,7 +5,7 @@
 Publish, version, and search text-based agent skills (`SKILL.md` + supporting files).
 Browse and share system lore (`SOUL.md` bundles) via JovSouls.
 
-Live: `https://hub.j0vebot.com` · JovSouls: `https://souls.j0vebot.com`
+Live: `https://hub.j0ve.bot` · JovSouls: `https://souls.j0ve.bot`
 
 ## Quick Start
 
@@ -51,7 +51,7 @@ cd jov-hub && bun install && bun dev
 
 ## $JOV
 
-Token: `4qHkV14MAqHqM5eEX9YzeTNhdGnzDeWQYj8kXpQUjov0` · 1B supply · [j0vebot.com](https://j0vebot.com)
+Token: `9Pgz2xfquZy3quM4mNVt7qf8B1t9NNgd2ENHU7Hrjove` · 1B supply · [j0ve.bot](https://j0ve.bot)
 
 ---
 

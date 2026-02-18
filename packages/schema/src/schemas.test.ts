@@ -68,10 +68,10 @@ describe('jovhub-schema', () => {
     expect(
       parseArk(
         WellKnownConfigSchema,
-        { registry: 'https://example.convex.site', authBase: 'https://hub.j0vebot.com' },
+        { registry: 'https://example.convex.site', authBase: 'https://hub.j0ve.bot' },
         'WellKnown',
       ),
-    ).toEqual({ registry: 'https://example.convex.site', authBase: 'https://hub.j0vebot.com' })
+    ).toEqual({ registry: 'https://example.convex.site', authBase: 'https://hub.j0ve.bot' })
 
     expect(
       parseArk(
@@ -84,14 +84,14 @@ describe('jovhub-schema', () => {
     const combined = parseArk(
       WellKnownConfigSchema,
       {
-        apiBase: 'https://hub.j0vebot.com',
-        registry: 'https://hub.j0vebot.com',
-        authBase: 'https://hub.j0vebot.com',
+        apiBase: 'https://hub.j0ve.bot',
+        registry: 'https://hub.j0ve.bot',
+        authBase: 'https://hub.j0ve.bot',
       },
       'WellKnown',
     ) as unknown as Record<string, unknown>
-    expect(combined.apiBase).toBe('https://hub.j0vebot.com')
-    expect(combined.registry).toBe('https://hub.j0vebot.com')
+    expect(combined.apiBase).toBe('https://hub.j0ve.bot')
+    expect(combined.registry).toBe('https://hub.j0ve.bot')
   })
 
   it('throws labeled errors', () => {

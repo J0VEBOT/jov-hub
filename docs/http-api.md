@@ -7,7 +7,7 @@ read_when:
 
 # HTTP API
 
-Base URL: `https://hub.j0vebot.com` (default).
+Base URL: `https://hub.j0ve.bot` (default).
 
 All v1 paths are under `/api/v1/...` and implemented by Convex HTTP routes (`convex/http.ts`).
 Legacy `/api/...` and `/api/cli/...` remain for compatibility (see `DEPRECATIONS.md`).
@@ -253,7 +253,7 @@ The CLI can discover registry/auth settings from the site:
 Schema:
 
 ```json
-{ "apiBase": "https://hub.j0vebot.com", "authBase": "https://hub.j0vebot.com", "minCliVersion": "0.0.5" }
+{ "apiBase": "https://hub.j0ve.bot", "authBase": "https://hub.j0ve.bot", "minCliVersion": "0.0.5" }
 ```
 
 If you self-host, serve this file (or set `CLAWHUB_REGISTRY` explicitly; legacy `CLAWDHUB_REGISTRY`).

@@ -13,7 +13,7 @@ A soul is a single file:
 
 - `SOUL.md` (or `soul.md`)
 
-For now, souls.j0vebot.com rejects any extra files.
+For now, souls.j0ve.bot rejects any extra files.
 
 ## `SOUL.md`
 

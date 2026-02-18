@@ -22,7 +22,7 @@ function makeOpts(overrides: Partial<GlobalOpts> = {}): GlobalOpts {
   return {
     workdir: '/work',
     dir: '/work/skills',
-    site: 'https://hub.j0vebot.com',
+    site: 'https://hub.j0ve.bot',
     registry: DEFAULT_REGISTRY,
     registrySource: 'default',
     ...overrides,
@@ -38,7 +38,7 @@ beforeEach(() => {
 describe('registry resolution', () => {
   it('prefers explicit registry over discovery/cache', async () => {
     readGlobalConfig.mockResolvedValue({ registry: 'https://auth.jovhub.com' })
-    discoverRegistryFromSite.mockResolvedValue({ apiBase: 'https://hub.j0vebot.com' })
+    discoverRegistryFromSite.mockResolvedValue({ apiBase: 'https://hub.j0ve.bot' })
 
     const registry = await resolveRegistry(
       makeOpts({ registry: 'https://custom.example', registrySource: 'cli' }),
@@ -50,13 +50,13 @@ describe('registry resolution', () => {
 
   it('ignores legacy registry and updates cache from discovery', async () => {
     readGlobalConfig.mockResolvedValue({ registry: 'https://auth.jovhub.com', token: 'tkn' })
-    discoverRegistryFromSite.mockResolvedValue({ apiBase: 'https://hub.j0vebot.com' })
+    discoverRegistryFromSite.mockResolvedValue({ apiBase: 'https://hub.j0ve.bot' })
 
     const registry = await getRegistry(makeOpts(), { cache: true })
 
-    expect(registry).toBe('https://hub.j0vebot.com')
+    expect(registry).toBe('https://hub.j0ve.bot')
     expect(writeGlobalConfig).toHaveBeenCalledWith({
-      registry: 'https://hub.j0vebot.com',
+      registry: 'https://hub.j0ve.bot',
       token: 'tkn',
     })
   })

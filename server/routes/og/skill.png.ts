@@ -35,7 +35,7 @@ function getApiBase(eventHost: string | null) {
   if (site) return site
 
   if (eventHost) return `https://${eventHost}`
-  return 'https://hub.j0vebot.com'
+  return 'https://hub.j0ve.bot'
 }
 
 async function ensureWasm() {
@@ -68,7 +68,7 @@ export default defineEventHandler(async (event) => {
 
   const ownerLabel = owner ? `@${owner}` : 'jovhub'
   const versionLabel = version ? `v${version}` : 'latest'
-  const footer = owner ? `hub.j0vebot.com/${owner}/${slug}` : `hub.j0vebot.com/skills/${slug}`
+  const footer = owner ? `hub.j0ve.bot/${owner}/${slug}` : `hub.j0ve.bot/skills/${slug}`
 
   const cacheKey = version ? 'public, max-age=31536000, immutable' : 'public, max-age=3600'
   setHeader(event, 'Cache-Control', cacheKey)

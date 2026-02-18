@@ -38,13 +38,13 @@ function getRegistry() {
   return (
     process.env.CLAWHUB_REGISTRY?.trim() ||
     process.env.CLAWDHUB_REGISTRY?.trim() ||
-    'https://hub.j0vebot.com'
+    'https://hub.j0ve.bot'
   )
 }
 
 function getSite() {
   return (
-    process.env.CLAWHUB_SITE?.trim() || process.env.CLAWDHUB_SITE?.trim() || 'https://hub.j0vebot.com'
+    process.env.CLAWHUB_SITE?.trim() || process.env.CLAWDHUB_SITE?.trim() || 'https://hub.j0ve.bot'
   )
 }
 

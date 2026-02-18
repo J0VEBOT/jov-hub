@@ -42,7 +42,7 @@ afterEach(() => {
 
 describe('site helpers', () => {
   it('returns default and env configured site URLs', () => {
-    expect(getJovHubSiteUrl()).toBe('https://hub.j0vebot.com')
+    expect(getJovHubSiteUrl()).toBe('https://hub.j0ve.bot')
     withMetaEnv({ VITE_SITE_URL: 'https://example.com' }, () => {
       expect(getJovHubSiteUrl()).toBe('https://example.com')
     })
@@ -68,7 +68,7 @@ describe('site helpers', () => {
 
   it('falls back to default JovSouls URL for invalid VITE_SITE_URL', () => {
     withMetaEnv({ VITE_SITE_URL: 'not a url' }, () => {
-      expect(getOnlyCrabsSiteUrl()).toBe('https://souls.j0vebot.com')
+      expect(getOnlyCrabsSiteUrl()).toBe('https://souls.j0ve.bot')
     })
   })
 
@@ -79,40 +79,40 @@ describe('site helpers', () => {
       expect(getOnlyCrabsHost()).toBe('souls.example.com')
       expect(detectSiteMode('souls.example.com')).toBe('souls')
       expect(detectSiteMode('sub.souls.example.com')).toBe('souls')
-      expect(detectSiteMode('hub.j0vebot.com')).toBe('skills')
+      expect(detectSiteMode('hub.j0ve.bot')).toBe('skills')
 
       expect(detectSiteModeFromUrl('https://souls.example.com/x')).toBe('souls')
       expect(detectSiteModeFromUrl('souls.example.com')).toBe('souls')
-      expect(detectSiteModeFromUrl('https://hub.j0vebot.com')).toBe('skills')
+      expect(detectSiteModeFromUrl('https://hub.j0ve.bot')).toBe('skills')
     })
   })
 
   it('detects site mode from window when available', () => {
-    withMetaEnv({ VITE_SOULHUB_HOST: 'souls.j0vebot.com' }, () => {
-      vi.stubGlobal('window', { location: { hostname: 'souls.j0vebot.com' } } as unknown as Window)
+    withMetaEnv({ VITE_SOULHUB_HOST: 'souls.j0ve.bot' }, () => {
+      vi.stubGlobal('window', { location: { hostname: 'souls.j0ve.bot' } } as unknown as Window)
       expect(getSiteMode()).toBe('souls')
     })
   })
 
   it('detects site mode from env on the server', () => {
-    withMetaEnv({ VITE_SITE_MODE: 'souls', VITE_SOULHUB_HOST: 'souls.j0vebot.com' }, () => {
+    withMetaEnv({ VITE_SITE_MODE: 'souls', VITE_SOULHUB_HOST: 'souls.j0ve.bot' }, () => {
       expect(getSiteMode()).toBe('souls')
     })
-    withMetaEnv({ VITE_SITE_MODE: 'skills', VITE_SOULHUB_HOST: 'souls.j0vebot.com' }, () => {
+    withMetaEnv({ VITE_SITE_MODE: 'skills', VITE_SOULHUB_HOST: 'souls.j0ve.bot' }, () => {
       expect(getSiteMode()).toBe('skills')
     })
   })
 
   it('detects site mode from VITE_SOULHUB_SITE_URL and SITE_URL fallback', () => {
     withMetaEnv(
-      { VITE_SITE_MODE: undefined, VITE_SOULHUB_SITE_URL: 'https://souls.j0vebot.com' },
+      { VITE_SITE_MODE: undefined, VITE_SOULHUB_SITE_URL: 'https://souls.j0ve.bot' },
       () => {
         expect(getSiteMode()).toBe('souls')
       },
     )
 
     withMetaEnv({ VITE_SOULHUB_SITE_URL: undefined, VITE_SITE_URL: undefined }, () => {
-      vi.stubEnv('SITE_URL', 'https://souls.j0vebot.com')
+      vi.stubEnv('SITE_URL', 'https://souls.j0ve.bot')
       expect(getSiteMode()).toBe('souls')
     })
   })
@@ -124,7 +124,7 @@ describe('site helpers', () => {
     expect(getSiteDescription('skills')).toContain('JovHub')
     expect(getSiteDescription('souls')).toContain('JovSouls')
 
-    expect(getSiteUrlForMode('skills')).toBe('https://hub.j0vebot.com')
-    expect(getSiteUrlForMode('souls')).toBe('https://souls.j0vebot.com')
+    expect(getSiteUrlForMode('skills')).toBe('https://hub.j0ve.bot')
+    expect(getSiteUrlForMode('souls')).toBe('https://souls.j0ve.bot')
   })
 })

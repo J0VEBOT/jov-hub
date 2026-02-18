@@ -36,7 +36,7 @@ function getApiBase(eventHost: string | null) {
   if (site) return site
 
   if (eventHost) return `https://${eventHost}`
-  return 'https://souls.j0vebot.com'
+  return 'https://souls.j0ve.bot'
 }
 
 async function ensureWasm() {
